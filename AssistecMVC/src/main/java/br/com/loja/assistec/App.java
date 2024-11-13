@@ -1,4 +1,4 @@
-package br.com.loja.assistec;
+ package br.com.loja.assistec;
 
 import br.com.loja.assistec.controller.LoginController;
 import br.com.loja.assistec.model.LoginDAO;

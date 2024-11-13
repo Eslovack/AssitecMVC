@@ -6,6 +6,7 @@ import java.awt.event.WindowAdapter;
 import java.awt.event.WindowEvent;
 import java.util.ArrayList;
 
+import br.com.loja.assistec.view.MensagemView;
 import br.com.loja.assistec.view.PrincipalView;
 
 public class PrincipalController {
@@ -36,8 +37,9 @@ public class PrincipalController {
 			String comando = e.getActionCommand();
 
 			switch (comando) {
+			
 			case "MenuUsuariosAction":
-				//abrirListagemUsuarios();
+				abrirListagemUsuarios();
 				break;
 			case "MenuSairAction":
 				sairDoSistema();
@@ -63,21 +65,25 @@ public class PrincipalController {
 	}
 
 	// Abre a tela de listagem de usuários
-	//private void abrirListagemUsuarios() {
+	private void abrirListagemUsuarios() {
 		//new ListarUsuarioController();
-	//}
+	}
 
 	// Exibe a mensagem de confirmação de saída e fecha o sistema se confirmado
 	private void sairDoSistema() {
-		int confirmacao = principalView.confirmarFecharSistema();
-		if (confirmacao == 0) {
+		//int confirmacao = principalView.confirmarFecharSistema();
+		
+		MensagemView mv = new MensagemView("Tem Certeza que deseja sair?");
+		int confirmacao = mv.getRespota();
+		if (confirmacao == 1) {
 			System.exit(0);
 		}
 	}
 
 	// Exibe a tela "Sobre" do sistema
 	private void mostrarInformacoesSobre() {
-		principalView.mostrarSobre();
+		//principalView.mostrarSobre();
+		new MensagemView("Bolsonaro é norte, Bolsonaro é nordeste, vai 17", 10);
 	}
 
 	// Configura o perfil do usuário e ajusta permissões no menu
