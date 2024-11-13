@@ -37,7 +37,7 @@ public class PrincipalController {
 
 			switch (comando) {
 			case "MenuUsuariosAction":
-				abrirListagemUsuarios();
+				//abrirListagemUsuarios();
 				break;
 			case "MenuSairAction":
 				sairDoSistema();
@@ -63,9 +63,9 @@ public class PrincipalController {
 	}
 
 	// Abre a tela de listagem de usuários
-	private void abrirListagemUsuarios() {
+	//private void abrirListagemUsuarios() {
 		//new ListarUsuarioController();
-	}
+	//}
 
 	// Exibe a mensagem de confirmação de saída e fecha o sistema se confirmado
 	private void sairDoSistema() {
